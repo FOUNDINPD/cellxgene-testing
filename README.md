@@ -1,6 +1,6 @@
 # Cellxgene Test README
-## 11/01/2019
-## Michelle Webb
+11/01/2019
+Michelle Webb
 
 The scRNA visualization tool cellxgene currently accepts .h5ad formatted files as input. The scripts in this directory show how to convert a seurat object .RDS file to .h5ad for visualization. The process entails conversion from seurat object to loom in R, followed by conversion of loom to scanpy AnnData format in python. 
 
@@ -21,6 +21,6 @@ pandas 0.25.1
 scanpy 1.4.4.post1
 cellxgene 0.12.0
 
-Cellxgene: https://chanzuckerberg.github.io/cellxgene/
-AnnData: https://icb-anndata.readthedocs-hosted.com/en/stable/anndata.AnnData.html
-Loom: http://loompy.org/
+Cellxgene: https://chanzuckerberg.github.io/cellxgene/            
+AnnData: https://icb-anndata.readthedocs-hosted.com/en/stable/anndata.AnnData.html      
+Loom: http://loompy.org/         
