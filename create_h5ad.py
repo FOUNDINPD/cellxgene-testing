@@ -13,7 +13,7 @@ data = sc.read_loom(integratedData.loom')
 metadata = pd.read_csv('metaData.csv')
 
 # Rename Cell Batch column to match metadata file
-data.obs['CDI_DZNE'] = data.obs.pop('')
+data.obs['CDI_DZNE'] = data.obs.pop('CellBatch')
 pd.merge(data.obs, metadata, by = 'CDI_DZNE')
 
 # Rename seurat embeddings to match cellxgene convention
