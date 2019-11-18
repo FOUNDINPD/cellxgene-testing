@@ -14,11 +14,11 @@ metadata = pd.read_csv('metaData.csv')
 
 # Rename Cell Batch column to match metadata file
 data.obs['CDI_DZNE'] = data.obs.pop('CellBatch')
-pd.merge(data.obs, metadata, by = 'CDI_DZNE')
+pd.merge(data.obs, metadata, on = 'CDI_DZNE')
 
 # Rename seurat embeddings to match cellxgene convention
-data.obs['X_pca'] = data.obsm.pop('pca_cell_embeddings')
-data.obs['X_tsne'] = data.obsm.pop('tsne_cell_embeddings')
-data.obs['X_umap'] = data.obsm.pop('umap_cell_embeddings')
+data.obsm['X_pca'] = data.obsm.pop('pca_cell_embeddings')
+data.obsm['X_tsne'] = data.obsm.pop('tsne_cell_embeddings')
+data.obsm['X_umap'] = data.obsm.pop('umap_cell_embeddings')
 
 adata.write(results_file)
